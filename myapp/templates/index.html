@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load bootstrap3 %}
+{% block page_content %}
+<div class="inner cover">
+    <h1 class="cover-heading" style="font-size:45px" >Select Company</h1>
+    <br><br><br>
+      <form role="form" action='/index/' method="post">
+        {% csrf_token %}
+        <div class="form-group">
+          {{ obj.company }}
+          <br><br>
+          <input type="submit" value="Show Selected" target="_blank" style="font-size:20px" class="btn btn-lg btn-default"/>
+        </div>
+      </form>
+    </p>
+</div>
+{% endblock page_content %}
